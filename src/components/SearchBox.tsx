@@ -1,16 +1,20 @@
-import * as React from 'react';
+import * as React from 'react'
 
-const SearchBox = ({ searchChange }) => {
+interface ISearchBoxProps {
+  searchChange(event: React.ChangeEvent<HTMLInputElement>): void
+}
+
+const SearchBox = ({ searchChange }: ISearchBoxProps) => {
   return (
-    <div className='pa2'>
+    <div className="pa2">
       <input
-        className='pa3 ba b--green bg-lightest-blue'
-        type='search'
-        placeholder='search robots'
+        className="pa3 ba b--green bg-lightest-blue"
+        type="search"
+        placeholder="search robots"
         onChange={searchChange}
       />
     </div>
-  );
-};
+  )
+}
 
-export default SearchBox;
+export default SearchBox
